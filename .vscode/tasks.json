@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build PublisherService (netcore)",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/DaprAdventures.PublisherService",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": "build"
+    },
+    {
+      "label": "Dapr PublisherService",
+      "command": "dapr",
+      "args": [
+        "run",
+        "--app-id",
+        "publisher-service",
+        "--components-path",
+        "${workspaceFolder}/components",
+        "--app-port",
+        "5100",
+        "--dapr-grpc-port",
+        "5101",
+        "--dapr-http-port",
+        "5180",
+        "--log-level",
+        "debug"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

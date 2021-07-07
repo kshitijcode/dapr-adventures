@@ -1,0 +1,23 @@
+{
+  // Use IntelliSense to find out which attributes exist for C# debugging
+  // Use hover for the description of the existing attributes
+  // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug PublisherService (netcore)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Build PublisherService (netcore)",
+      "program": "${workspaceFolder}/DaprAdventures.PublisherService/bin/Debug/net5.0/DaprAdventures.PublisherService.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/DaprAdventures.PublisherService",
+      "stopAtEntry": false,
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://127.0.0.1:5100;https://127.0.0.1:5102",
+        "DAPR_HTTP_PORT": "5180"
+      }
+    }
+  ]
+}
