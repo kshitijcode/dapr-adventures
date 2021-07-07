@@ -18,6 +18,21 @@
         "ASPNETCORE_URLS": "http://127.0.0.1:5100;https://127.0.0.1:5102",
         "DAPR_HTTP_PORT": "5180"
       }
+    },
+    {
+      "name": "Debug SubscriberService (netcore)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Build SubscriberService (netcore)",
+      "program": "${workspaceFolder}/DaprAdventures.SubscriberService/bin/Debug/net5.0/DaprAdventures.SubscriberService.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/DaprAdventures.SubscriberService",
+      "stopAtEntry": false,
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://127.0.0.1:5200",
+        "DAPR_HTTP_PORT": "5280"
+      }
     }
   ]
 }

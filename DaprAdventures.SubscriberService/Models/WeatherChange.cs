@@ -1,5 +1,4 @@
-
-namespace DaprAdventures.PublisherService.Models
+namespace DaprAdventures.SubscriberService.Models
 {
     public class WeatherChange
     {

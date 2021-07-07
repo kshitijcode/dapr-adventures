@@ -15,24 +15,17 @@
       "group": "build"
     },
     {
-      "label": "Dapr PublisherService",
-      "command": "dapr",
+      "label": "Build SubscriberService (netcore)",
+      "command": "dotnet",
+      "type": "process",
       "args": [
-        "run",
-        "--app-id",
-        "publisher-service",
-        "--components-path",
-        "${workspaceFolder}/components",
-        "--app-port",
-        "5100",
-        "--dapr-grpc-port",
-        "5101",
-        "--dapr-http-port",
-        "5180",
-        "--log-level",
-        "debug"
+        "build",
+        "${workspaceFolder}/DaprAdventures.SubscriberService",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
       ],
-      "problemMatcher": []
+      "problemMatcher": "$msCompile",
+      "group": "build"
     }
   ]
 }
