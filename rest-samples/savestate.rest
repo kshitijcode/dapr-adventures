@@ -1,0 +1,10 @@
+@savestate-service = localhost:5300
+
+### Create an order via order-service POST
+POST http://{{savestate-service}}/saveWeatherState
+Content-Type: application/json
+
+{
+    "oldWeatherState" : "Hot",
+    "currentWeatherState" : "Freezing"
+}

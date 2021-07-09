@@ -20,4 +20,7 @@ spec:
         name: AZURE_EVENTHUB_STORAGE_ACCOUNT_CONTAINER_NAME
 auth:
   secretStore: envvar-secret-store
-
+  
+scopes:
+  - publisher-service
+  - subscriber-service

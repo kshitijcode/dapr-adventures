@@ -1,0 +1,26 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: mongo
+spec:
+  type: state.mongodb
+  version: v1
+  metadata:
+    - name: host
+      secretKeyRef:
+        name: MONGO_HOST
+    - name: username
+      secretKeyRef:
+        name: MONGO_ROOT_USERNAME
+    - name: password
+      secretKeyRef:
+        name: MONGO_ROOT_PASSWORD
+    - name: databaseName
+      value: admin
+
+
+scopes:
+  - savestate-service
+
+auth:
+  secretStore: envvar-secret-store
